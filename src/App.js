@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Validation from './components/Validation'
 
 import './App.css';
 
@@ -18,6 +19,7 @@ export default class App extends Component {
   return (
     <div className="App">
       <input onChange={((event) => this.onChange(event))}/>
+      <Validation />
     </div>
   );
   }
