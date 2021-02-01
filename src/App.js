@@ -19,7 +19,7 @@ export default class App extends Component {
   return (
     <div className="App">
       <input onChange={((event) => this.onChange(event))}/>
-      <Validation />
+      <Validation text={this.state.string} />
     </div>
   );
   }
