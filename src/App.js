@@ -1,23 +1,26 @@
-import logo from './logo.svg';
+import React, { Component } from 'react'
+
 import './App.css';
 
-function App() {
+export default class App extends Component {
 
   state = {
-    string: ''
+    string: '',
   }
 
   onChange = (event) => {
-    const string = {...this.state.string}
+    let string = {...this.state.string}
     string = event.target.value
     this.setState({string: string})
   }
-
+  render() {
+    console.log(this.state)
   return (
     <div className="App">
       <input onChange={((event) => this.onChange(event))}/>
     </div>
   );
+  }
 }
 
-export default App;
+
