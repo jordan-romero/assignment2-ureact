@@ -17,18 +17,21 @@ export default class App extends Component {
   }
 
   charHandler = () => {
-    this.state.string.map(char => {
-      return <Char char={char}/>
+    this.state.string.split('').map(char => {
+      console.log(char)
+      return <Char char={char} />
     })
   }
 
   render() {
-    console.log(this.state)
   return (
     <div className="App">
       <input onChange={((event) => this.onChange(event))}/>
       <Validation text={this.state.string} />
-      charHandler()
+      {this.state.string.split('').map(char => {
+        console.log(char)
+        return <Char char={char} />
+      })}
     </div>
   );
   }

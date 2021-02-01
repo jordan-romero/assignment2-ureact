@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Char = () => {
+const Char = (props) => {
     const style = {
         display: 'inline-block',
         padding: '16px',
@@ -9,9 +9,10 @@ const Char = () => {
         border: '1px solid black'
 
     }
+    console.log(props.char)
     return (
-        <div>
-            
+        <div style={style}>
+            {props.char}
         </div>
     )
 }
